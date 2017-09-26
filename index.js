@@ -17,6 +17,10 @@ module.exports = class PromiseWorkQueue {
         this._tryToWork();
     }
 
+    getActiveWorkers () {
+        return this.activeWorkers;
+    }
+
     getQueueSize () {
         return this._payloads.length;
     }
@@ -42,6 +46,7 @@ module.exports = class PromiseWorkQueue {
                     return this._tryToWork();
                 })
                 .catch(err => {
+                    this.activeWorkers -= 1;
                     console.log('Failed to process queue: ', err);
                 });
             } else {
