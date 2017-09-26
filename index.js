@@ -39,7 +39,7 @@ module.exports = class PromiseWorkQueue {
                 }, Promise.resolve(payload))
                 .then(() => {
                     this.activeWorkers -= 1;
-                    this._tryToWork();
+                    return this._tryToWork();
                 })
                 .catch(err => {
                     console.log('Failed to process queue: ', err);
