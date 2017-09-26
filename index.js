@@ -41,6 +41,9 @@ module.exports = class PromiseWorkQueue {
                     this.activeWorkers -= 1;
                     this._tryToWork();
                 })
+                .catch(err => {
+                    console.log('Failed to process queue: ', err);
+                });
             } else {
                 // nothing to do actually
                 this.activeWorkers -= 1;
