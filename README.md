@@ -3,7 +3,9 @@
 [![Dependency Status](https://img.shields.io/david/radicand/promise-work-queue.svg?style=flat)](https://david-dm.org/radicand/promise-work-queue)
 [![npm version](https://badge.fury.io/js/promise-work-queue.svg?style=flat)](http://badge.fury.io/js/promise-work-queue)
 
-A simple promise-based work queue to pipeline tasks
+Build a flexible promise-based workflow queue and then pipe payloads into it for concurrency-managed processing.
+
+The point is to eliminate repeating the same function steps over and over - define them once, and send all your data into the queue as it arrives and have it processed by a set number of concurrent workers.
 
 ## Installation
 
@@ -23,7 +25,7 @@ A simple promise-based work queue to pipeline tasks
 ```js
 const PromiseWorkQueue = require('promise-work-queue');
 
-let queue = new PromiseWorkQueue(2); // new queue with 2 workers
+let queue = new PromiseWorkQueue(2); // new queue with 2 workers (default is 1)
 
 queue.addStep(payload => ++payload); // incrememnt the payload
 queue.addStep(payload => new Promise((resolve, reject) => 
