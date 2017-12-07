@@ -1,30 +1,26 @@
 {
-  "name": "promise-work-queue",
-  "version": "1.0.1",
-  "description": "A simple promise-based work queue to pipeline tasks",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": ">=6.4.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/radicand/promise-work-queue.git"
-  },
-  "keywords": [
-    "promise",
-    "queue",
-    "pipeline",
-    "nodejs",
-    "tasks",
-    "worker"
-  ],
-  "author": "Nick Pappas",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/radicand/promise-work-queue/issues"
-  },
-  "homepage": "https://github.com/radicand/promise-work-queue#readme"
+	"name": "promise-work-queue",
+	"version": "1.0.2",
+	"description": "A simple promise-based work queue to pipeline tasks",
+	"main": "dist/index.js",
+	"module": "src/index.ts",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"test": "node dist/tests.js"
+	},
+	"engines": {
+		"node": ">=6.4.0"
+	},
+	"typings": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/radicand/promise-work-queue.git"
+	},
+	"keywords": [ "promise", "queue", "pipeline", "nodejs", "tasks", "worker" ],
+	"author": "Nick Pappas",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/radicand/promise-work-queue/issues"
+	},
+	"homepage": "https://github.com/radicand/promise-work-queue#readme"
 }
