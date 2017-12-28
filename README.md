@@ -19,7 +19,7 @@ The point is to eliminate repeating the same function steps over and over - defi
 
 
 ```js
-const PromiseWorkQueue = require('promise-work-queue');
+const PromiseWorkQueue = require('promise-work-queue').default;
 
 let queue = new PromiseWorkQueue(2); // new queue with 2 workers (default is 1)
 
@@ -40,7 +40,7 @@ queue.addPayload(99);
 
 If you're using TypeScript, typings are included and you can do:
 ```ts
-import PromiseWorkQueue from './index';
+import PromiseWorkQueue from 'promise-work-queue';
 
 // any type required here to allow last function to not have a return value
 // or for cases where return values may mutate along the chain

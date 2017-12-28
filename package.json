@@ -1,12 +1,13 @@
 {
 	"name": "promise-work-queue",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A simple promise-based work queue to pipeline tasks",
 	"main": "dist/index.js",
 	"module": "src/index.ts",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"test": "node dist/tests.js"
+		"build": "tsc",
+		"test": "node tests.js && ts-node tests.ts"
 	},
 	"engines": {
 		"node": ">=6.4.0"
@@ -16,11 +17,22 @@
 		"type": "git",
 		"url": "git+https://github.com/radicand/promise-work-queue.git"
 	},
-	"keywords": [ "promise", "queue", "pipeline", "nodejs", "tasks", "worker" ],
+	"keywords": [
+		"promise",
+		"queue",
+		"pipeline",
+		"nodejs",
+		"tasks",
+		"worker"
+	],
 	"author": "Nick Pappas",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/radicand/promise-work-queue/issues"
 	},
-	"homepage": "https://github.com/radicand/promise-work-queue#readme"
+	"homepage": "https://github.com/radicand/promise-work-queue#readme",
+	"devDependencies": {
+		"ts-node": "^4.1.0",
+		"typescript": "^2.6.2"
+	}
 }
