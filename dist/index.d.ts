@@ -5,6 +5,7 @@ export default class PromiseWorkQueue<T> {
     private _steps;
     private activeWorkers;
     private _onDrainFunc;
+    private _onErrorFunc;
     constructor(MAX_ACTIVE_WORKERS?: number, promises?: Array<PromiseLikeFunc<T>>);
     addStep(func: PromiseLikeFunc<T>): void;
     addPayload(payload: T): void;
@@ -12,5 +13,6 @@ export default class PromiseWorkQueue<T> {
     getQueueSize(): number;
     getQueueStepSize(): number;
     onDrain(func: () => void): void;
+    onError(func: (err: Error, payload: T) => void): void;
     _tryToWork(): void;
 }
