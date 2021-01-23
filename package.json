@@ -1,6 +1,6 @@
 {
   "name": "promise-work-queue",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A simple promise-based work queue to pipeline tasks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
