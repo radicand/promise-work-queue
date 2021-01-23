@@ -31,12 +31,12 @@
   },
   "homepage": "https://github.com/radicand/promise-work-queue#readme",
   "devDependencies": {
-    "@types/chai": "4.1.4",
-    "@types/mocha": "5.2.5",
-    "@types/sinon": "5.0.2",
-    "chai": "4.1.2",
-    "mocha": "5.2.0",
-    "sinon": "6.2.0",
-    "typescript": "3.0.3"
+    "@types/chai": "4.2.14",
+    "@types/mocha": "8.2.0",
+    "@types/sinon": "9.0.10",
+    "chai": "4.2.0",
+    "mocha": "8.2.1",
+    "sinon": "9.2.4",
+    "typescript": "4.1.3"
   }
 }
